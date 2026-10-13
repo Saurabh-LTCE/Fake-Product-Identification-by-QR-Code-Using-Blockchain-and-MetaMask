@@ -2,7 +2,8 @@
  The main goal is to demonstrate how blockchain can help identify fake products by verifying product registration records. I want to use MetaMask to interact with the blockchain smart contract and MongoDB to store additional product information.
 
 
-How to run
+
+HOW TO RUN
 
 Start MongoDB, then npm run node, npm run deploy, npm run backend and npm run frontend.
 
