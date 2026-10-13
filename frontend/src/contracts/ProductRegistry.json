@@ -1,0 +1,255 @@
+{
+  "contractName": "ProductRegistry",
+  "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "chainId": 31337,
+  "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "deployedAt": "2026-10-13T12:42:55.885Z",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "manufacturer",
+          "type": "address"
+        }
+      ],
+      "name": "ManufacturerAuthorized",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "manufacturer",
+          "type": "address"
+        }
+      ],
+      "name": "ManufacturerRevoked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "productId",
+          "type": "string"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "dataHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "registeredBy",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "registeredAt",
+          "type": "uint256"
+        }
+      ],
+      "name": "ProductRegistered",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "MAX_PRODUCT_ID_LENGTH",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "manufacturer",
+          "type": "address"
+        }
+      ],
+      "name": "authorizeManufacturer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "productId",
+          "type": "string"
+        }
+      ],
+      "name": "getProduct",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "registered",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "dataHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "registeredAt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "registeredBy",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isAuthorizedManufacturer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "productId",
+          "type": "string"
+        }
+      ],
+      "name": "isProductRegistered",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "productId",
+          "type": "string"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "dataHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "registerProduct",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "manufacturer",
+          "type": "address"
+        }
+      ],
+      "name": "revokeManufacturer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalProducts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "productId",
+          "type": "string"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "expectedHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "verifyProduct",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "registered",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "hashMatches",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}
